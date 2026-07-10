@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Maby ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#ffc2d6,#ffb3c6);
+    min-height:100vh;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    color:rgba(255,255,255,0.7);
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.title{
+    font-family:'Dancing Script',cursive;
+    font-size:4rem;
+    margin-top:40px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    margin-bottom:40px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin:50px 0;
+}
+
+.photo{
+    background:rgba(255,255,255,0.2);
+    border-radius:20px;
+    padding:15px;
+    backdrop-filter:blur(10px);
+}
+
+.photo img{
+    width:100%;
+    border-radius:15px;
+}
+
+.letter{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:25px;
+    line-height:2;
+    text-align:left;
+    font-size:1.05rem;
+}
+
+footer{
+    margin:60px 0;
+    font-family:'Dancing Script',cursive;
+    font-size:2rem;
+}
+</style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+
+    <h1 class="title">Happy 11 Months, Maby ❤️</h1>
+    <p class="subtitle">
+        Every moment with you has been my favorite story.
+    </p>
+
+    <!-- Replace these images with your photos -->
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="images/1d53aaf6-e11d-4f3d-92e7-458f9d3f0709.jfif" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="images/5b955c03-cee2-4b4a-a5a3-ac84a65940c2.jfif" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="images/4ff80fec-ab98-4c0b-9877-aa8a96e45749.jfif" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="images/3365818c-4e0e-40e6-bd33-35179f665861.jfif" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="images/c807a01f-a27f-4d85-ac37-75cc0d8755ed.jfif" alt="">
+        </div>
+
+        <div class="photo">
+            <img src="images/dd7b2046-a0aa-42bd-b028-52ae9cf40ddb.jfif" alt="">
+        </div>
+
+
+    </div>
+
+    <div class="letter">
+
+        <p>
+            Hi maby! This is what you want from the very start.
+            You want me to create a long sweet message na hindi formal. 💕
+        </p>
+
+        <br>
+
+        <p>
+            Happy 11 months of love, my baby. One month nalang anniv na 🤔.
+            What should we do? Chos HAHAHAHAHA.
+            I'm looking forward for our next month maby.
+        </p>
+
+        <br>
+
+        <p>
+            I love the way you love me. The way you show how you deeply love me.
+            Sorry sa mga times na hindi kita naiintindihan.
+            Sorry sa mga times na nagkukulang ako.
+            But one thing I need you to know is...
+            I really, really love you. ❤️
+        </p>
+
+        <br>
+
+        <p>
+            I'm so proud of you, April.
+            Those silent battles, exhaustion,
+            and yung mga times na hindi mo naiintindihan yung sarili mo.
+            Thank you for helping yourself.
+            Keep up the good work ha.
+            I love you.
+        </p>
+
+        <br>
+
+        <p>
+            May this month help us grow more,
+            understand each other better,
+            and make us even stronger.
+            I love you so much, April &lt;33
+        </p>
+
+    </div>
+
+    <footer>
+        Forever your maby ❤️
+    </footer>
+
+</div>
+
+<script>
+const hearts = document.getElementById("hearts");
+
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    heart.style.animationDuration =
+        Math.random() * 5 + 5 + "s";
+
+    hearts.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 10000);
+}, 300);
+</script>
+
+</body>
+</html>
